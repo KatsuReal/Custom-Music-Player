@@ -1,13 +1,13 @@
 import tkinter as tk
 import pygame
-
+import tkinter.font as tkFont
 
 window = tk.Tk()
-window.title("Fake Spotify")
-window.geometry("500x475")
+window.title("Custom Music Player")
+window.geometry("300x600")
 
 pygame.mixer.init()
-window.configure(background="purple")
+window.configure(background="slategray")
 flag = True
 
 def play1():
@@ -46,22 +46,27 @@ def loop():
     else:
         lop.configure(bg="white", fg="black", text = "Loop : Off")
 
-btn1 = tk.Button(window, text ="Press For Escalon", command=play1, bg="black", fg="white")
+custom_font = tkFont.Font(family="Arial", size = 20)
+
+mainlbl = tk.Label(window, text = "Custom Music Player",bg = "slategray", fg = "navy", font=custom_font)
+mainlbl.pack(pady=20, padx=10)
+
+btn1 = tk.Button(window, text ="Escalon", command=play1, bg="black", fg="white")
 btn1.pack(pady=20, padx=10)
 
-btn2 = tk.Button(window, text ="Press For The Room Where It Happens", command=play2, bg="black", fg="white")
+btn2 = tk.Button(window, text ="The Room Where It Happens", command=play2, bg="black", fg="white")
 btn2.pack(pady=20, padx=10)
 
-btn3 = tk.Button(window, text ="Press For The Ten Duel Commandments", command=play3, bg="black", fg="white")
+btn3 = tk.Button(window, text ="Ten Duel Commandments", command=play3, bg="black", fg="white")
 btn3.pack(pady=20, padx=10)
 
-btn4 = tk.Button(window, text ="Press For Cynthia Theme", command=play4, bg="black", fg="white")
+btn4 = tk.Button(window, text ="Cynthia Theme", command=play4, bg="black", fg="white")
 btn4.pack(pady=20, padx=10)
 
-btn5 = tk.Button(window, text ="Press For Lets Get Loud", command=play5, bg="black", fg="white")
+btn5 = tk.Button(window, text ="Lets Get Loud", command=play5, bg="black", fg="white")
 btn5.pack(pady=20, padx=10)
 
-btn6 = tk.Button(window, text ="Press For Number one - Tybw", command=play6, bg="black", fg="white")
+btn6 = tk.Button(window, text ="Number one - Tybw", command=play6, bg="black", fg="white")
 btn6.pack(pady=20, padx=10)
 
 stp = tk.Button(window, text = "Stop", command=stop, bg="white", fg="black")
