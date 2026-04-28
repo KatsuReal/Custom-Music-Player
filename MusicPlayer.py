@@ -6,10 +6,10 @@ from tkinter import filedialog
 
 window = tk.Tk()
 window.title("Custom Music Player")
-window.geometry("300x350")
+window.geometry("1280x720")
 
 pygame.mixer.init()
-window.configure(background="slategray")
+window.configure(background="white")
 
 songs = Listbox(window, bg = "black", fg = "white", width = 60, selectbackground = "gray", selectforeground = "black")
 songs.pack(pady = 20)
