@@ -1,5 +1,5 @@
 # Custom-Music-Player
-A custom music player for myself
+A custom music player using python
 
 Note : Currently finished with the project.
 
